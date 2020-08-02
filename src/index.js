@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home'
 import Leaders from './pages/Leaders'
 import Lessons from './pages/Lessons'
-
+import Variables3 from './pages/Variables3'
 
 ReactDOM.render((
   <BrowserRouter>
@@ -15,6 +15,7 @@ ReactDOM.render((
               <Route path="/" component={Home} exact />
               <Route path="/leaders" component={Leaders} />
               <Route path="/lessons" component={Lessons} />
+              <Route path="/variables3" component={Variables3} />
           </Switch>
       </main>
   </BrowserRouter>
