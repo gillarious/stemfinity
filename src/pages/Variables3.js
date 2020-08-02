@@ -18,16 +18,36 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const button = makeStyles(theme => ({
+  footerR: {
+    position: 'fixed',
+    bottom: 50,
+    right: 50,
+    textAlign: 'right'
+  },
+
+  footerL: {
+    position: 'fixed',
+    bottom: 50,
+    left: 50,
+    textAlign: 'left'
+  }
+}));
+
 const theme = createMuiTheme({
   palette: {
       secondary: {
           main: '#FFB5EA'
       }
     },
+  typography: {
+      fontFamily: 'Poppins',
+    },
 });
 
 export default function Variables3() {
     const classes = useStyles();
+    const loc = button();
 
     return (
     <div className="App-header">
@@ -38,27 +58,30 @@ export default function Variables3() {
                 </Grid>
             </Grid>
         </Container>
+
+    <div className="button-left">
       <MuiThemeProvider theme={theme}>
         <Button
-          variant="outlined"
+          variant="contained"
           color = "secondary"
-          className={classes.button}
+          className={loc.footerR}
           endIcon={<ArrowForwardIosIcon />}
         >
         Next
-        </Button>
+        </Button></MuiThemeProvider></div>
 
+      <div className="button-right">
+        <MuiThemeProvider theme={theme}>
         <Button
-          variant="outlined"
+          variant="contained"
           color = "secondary"
-          className={classes.button}
+          className={loc.footerL}
           startIcon={<ArrowBackIosIcon />}
         >
         Back
         </Button>
-      </MuiThemeProvider>
+      </MuiThemeProvider></div>
     </div>
-
   );
 }
 
