@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home'
+import Leaders from './pages/Leaders'
+import Lessons from './pages/Lessons'
 
 
 ReactDOM.render((
   <BrowserRouter>
       <main>
           <Switch>
-              <Route path="/" component={App} exact />
-              <Route path="/about" component={About} />
-              <Route component={Error} />
+              <Route path="/" component={Home} exact />
+              <Route path="/leaders" component={Leaders} />
+              <Route path="/lessons" component={Lessons} />
           </Switch>
       </main>
   </BrowserRouter>
