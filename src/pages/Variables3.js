@@ -1,24 +1,46 @@
 import React from 'react';
+import { Box, Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
+import Button from '@material-ui/core/Button';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-function Variables3() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
+}));
+
+export default function Variables3() {
+    const classes = useStyles();
+
+    return (
+    <div className="App-header">
+        <Container>
+            <Grid container spacing={10}>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>STEMfinity & Beyond</Paper>
+                </Grid>
+            </Grid>
+        </Container>
+
+        <Button
+  variant="outlined"
+  color="secondary"
+  className={classes.button}
+  startIcon={<ArrowForwardIosIcon />}
+>
+  Next
+</Button>
+</div>
+
   );
-}
+    }
 
-export default Variables3;
+
+{/*export default Variables3; */}
