@@ -25,8 +25,8 @@ export default function Leaders() {
                 <Paper className={classes.paper}>Variables (Page 2)</Paper>
             </Grid>
         </Grid>
-        <Grid container spacing={5}>
-          <img src={"~/assets/people/gracehopper.jpeg"} alt="Grace Hopper in a military uniform."></img>
+        <Grid item spacing={10}>
+          <Link to="/gracehopper">Grace Hopper AHREF</Link>
         </Grid>
     </Container>
 </div>
