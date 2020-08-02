@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route} from 'react-router-dom';
 import { Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
 
@@ -22,11 +22,12 @@ export default function Leaders() {
     <Container>
         <Grid container spacing={10}>
             <Grid item xs={12} className="title">
-                <Paper className={classes.paper}>Variables (Page 2)</Paper>
+                <Paper className={classes.paper}>Leaders (Page 2)</Paper>
             </Grid>
         </Grid>
         <Grid item spacing={10}>
-          <Link to="/gracehopper">Grace Hopper AHREF</Link>
+          <Link to="tech/leaders/gracehopper">Grace Hopper Link</Link>
+          <a href="pages/gracehopper.js">Grace Hopper Ahref</a>
         </Grid>
     </Container>
 </div>
