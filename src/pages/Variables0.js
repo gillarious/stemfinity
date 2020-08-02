@@ -22,7 +22,7 @@ const button = makeStyles(theme => ({
   footer: {
     position: 'fixed',
     bottom: 50,
-    right: 590,
+    right: 585,
     textAlign: 'center'
   },
 
@@ -52,7 +52,7 @@ export default function Variables0() {
         <div className="App-header">
             <Container>
                 <Grid container spacing={10}>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} className="title">
                         <Paper className={classes.paper}>Variables</Paper>
                     </Grid>
                 </Grid>
@@ -62,13 +62,14 @@ export default function Variables0() {
                 <br />
                 1. What a variable is, and why it&apos;s important in computing<br />
                 2. How to declare and initialize a variable<br />
-                3. How conditionals are used
+                3. Variable manipulation
             </Typography>
             <div className="button-left">
                 <MuiThemeProvider theme={theme}>
                     <Button
                         variant="contained"
                         color="secondary"
+                        href="/variables1"
                         className={loc.footer}
                     >
                         Let's Begin!
@@ -80,6 +81,7 @@ export default function Variables0() {
                         variant="contained"
                         color="secondary"
                         className={loc.footerL}
+                        href='/tech/lessons'
                         startIcon={<ArrowBackIosIcon />}
                     >
                         Back
