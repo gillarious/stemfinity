@@ -13,8 +13,8 @@ ReactDOM.render((
       <main>
           <Switch>
               <Route path="/" component={Home} exact />
-              <Route path="/leaders" component={Leaders} />
-              <Route path="/lessons" component={Lessons} />
+              <Route path="/tech/leaders" component={Leaders} />
+              <Route path="/tech/lessons" component={Lessons} />
               <Route path="/variables3" component={Variables3} />
           </Switch>
       </main>
