@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-function Leaders() {
+export default function Leaders() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,5 +20,3 @@ function Leaders() {
     </div>
   );
 }
-
-export default Leaders;

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-function Lessons() {
+export default function Lessons() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,5 +20,3 @@ function Lessons() {
     </div>
   );
 }
-
-export default Lessons;

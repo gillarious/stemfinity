@@ -1,24 +1,42 @@
 import React from 'react';
+import { Box, Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
 
-function Home() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
+}));
+
+export default function Home() {
+    const classes = useStyles();
+
+    return (
+    <div className="App-header">
+        <Container>
+            <Grid container spacing={10}>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>STEMfinity & Beyond</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper className={classes.paper}>xs=6</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper className={classes.paper}>xs=6</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper className={classes.paper}>xs=6</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper className={classes.paper}>xs=6</Paper>
+                </Grid>
+            </Grid>
+        </Container>
     </div>
   );
 }
-
-export default Home;
