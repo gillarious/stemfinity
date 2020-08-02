@@ -24,6 +24,15 @@
   color: #000;
 }
 
+.Variables-header {
+  text-align: center;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000
+}
+
 .App-link {
   color: #61dafb;
 }
