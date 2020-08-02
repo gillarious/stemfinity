@@ -10,6 +10,7 @@ import Variables0 from './pages/Variables0'
 import Variables1 from './pages/Variables1'
 import Variables3 from './pages/Variables3'
 import Conditionals from './pages/Conditionals'
+import gracehopper from './pages/gracehopper'
 
 ReactDOM.render((
   <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render((
               <Route path="/" component={Home} exact />
               <Route path="/tech/leaders" component={Leaders} />
               <Route path="/tech/lessons" component={Lessons} />
+              <Route path="/gracehopper" component={gracehopper} />
               <Route path="/variables0" component={Variables0} />
               <Route path="/variables1" component={Variables1} />
               <Route path="/variables3" component={Variables3} />
