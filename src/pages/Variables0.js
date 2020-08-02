@@ -70,7 +70,7 @@ export default function Variables0() {
                         variant="contained"
                         color="secondary"
                         href="/variables1"
-                        className={loc.footer}
+                        className={loc.button}
                     >
                         Let's Begin!
         </Button></MuiThemeProvider></div>
