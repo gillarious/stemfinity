@@ -11,6 +11,7 @@ import Variables1 from './pages/Variables1'
 import Variables3 from './pages/Variables3'
 import Conditionals from './pages/Conditionals'
 import gracehopper from './pages/gracehopper'
+import VariablesSummary from './pages/VariablesSummary'
 
 ReactDOM.render((
   <BrowserRouter>
@@ -23,7 +24,8 @@ ReactDOM.render((
               <Route path="/variables0" component={Variables0} />
               <Route path="/variables1" component={Variables1} />
               <Route path="/variables3" component={Variables3} />
-              <Route path="/conditionals" compinent={Conditionals} />
+              <Route path="/conditionals" component={Conditionals} />
+              <Route path="/variablessummary" component={VariablesSummary} />
           </Switch>
       </main>
   </BrowserRouter>
