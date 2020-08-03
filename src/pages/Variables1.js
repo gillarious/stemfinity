@@ -79,11 +79,11 @@ export default function Variables1() {
                 </Grid>
                 <Grid item xs wrap="nowrap">
                     <p style={{ textAlign: "left" }}>
-                            When you create a variable and assign it a value, you are <strong>defining</strong> them. To properly define a variable,
-                            you must write the variable name followed by an "=", a.k.a the <strong>assignment operator</strong>, and finally write down the item
-                            you want to store inside of the variable on the right-hand side. (Tip: Think about variables used in mathematics, we assign values
-                            to variables and we can reference the value the variable contains by just using the variable name.) Here's some examples of
-                            defining variables:<br /><br />
+                        When you create a variable and assign it a value, you are <strong>defining</strong> them. In order to properly define a variable,
+                        you must write the variable name followed by the "=" sign, a.k.a. the <strong>assignment operator</strong> in programming, 
+                        and finally write down the item you want to store inside of the variable on the right-hand side. (Tip: Think about variables 
+                        used in mathematics, we assign values to variables and we can reference the value the variable contains by just using the 
+                        variable name.) Here's some examples of defining variables:<br /><br />
                             x = 3<br />
                             my_greeting = "Hi"<br />
                             PI = 3.14<br />

@@ -23,7 +23,7 @@ ReactDOM.render((
               <Route path="/variables0" component={Variables0} />
               <Route path="/variables1" component={Variables1} />
               <Route path="/variables3" component={Variables3} />
-              <Route path="/conditionals" compinent={Conditionals} />
+              <Route path="/conditionals0" component={Conditionals} />
           </Switch>
       </main>
   </BrowserRouter>
