@@ -22,12 +22,11 @@ export default function Leaders() {
     <Container>
         <Grid container spacing={10}>
             <Grid item xs={12} className="title">
-                <Paper className={classes.paper}>Leaders (Page 2)</Paper>
+                <Paper className={classes.paper}>Leaders</Paper>
             </Grid>
         </Grid>
         <Grid item spacing={10}>
           <Link to="tech/leaders/gracehopper">Grace Hopper Link</Link>
-          <a href="pages/gracehopper.js">Grace Hopper Ahref</a>
         </Grid>
     </Container>
 </div>
