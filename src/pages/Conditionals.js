@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import conditionals_img from '../assets/lessons/conditionals_1.png';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +15,18 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        backgroundColor: '#73E08B',
+        color: 'black',
     },
+    img: {
+        display: 'block',
+        width: "15%",
+        height: "15%",
+    },
+    title: {
+        backgroundColor: '#73E08B',
+        textAlign: 'center'
+    }
 }));
 
 const button = makeStyles(theme => ({
@@ -51,27 +62,31 @@ export default function Variables0() {
     return (
         <div className="App-header">
             <Container>
-                <Grid container spacing={10}>
-                    <Grid item xs={12} className="title">
-                        <Paper className={classes.paper}>Conditionals</Paper>
+                <Grid container spacing={9}>
+                    <Grid item xs={12}>
+                        <Paper className={classes.paper}>Lesson: Conditionals</Paper>
                     </Grid>
                 </Grid>
-            </Container>
-            <Typography variant="h6" align="center" color="textSecondary" paragraph>
+            <center>
+                <p></p>
+                <img className={classes.img} alt="Conditionals help with program flow" src={conditionals_img} />
+            </center>
+            <Typography variant="h6" align="center" color="black" paragraph>
                 <br />In this lesson, you&apos;ll learn:<br />
                 <br />
                 1. What a conditional statement is and why it&apos;s important in computing<br />
                 2. The different types of conditionals<br />
-                3. How to use conditionals
+                3. How to use conditionals<br/>
             </Typography>
-            <div className="button-left">
-                <MuiThemeProvider theme={theme}>
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={loc.button}
-                    >
-                        Let's Begin!
+        </Container>
+        <div className="button-left">
+            <MuiThemeProvider theme={theme}>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    className={loc.button}
+                >
+                    Let's Begin!
         </Button></MuiThemeProvider></div>
 
             <div className="button-center">
