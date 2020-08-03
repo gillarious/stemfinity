@@ -93,3 +93,14 @@ body {
   font-size: calc(30px + 2vmin);
   color: #000;
 }
+
+.Lessons a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Lessons .MuiTableCell-root {
+  font-family: 'Poppins';
+  text-align: left;
+}

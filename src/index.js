@@ -19,7 +19,7 @@ ReactDOM.render((
       <main>
           <Switch>
               <Route path="/" component={Home} exact />
-              <Route path="/tech/leaders" component={Leaders} />
+              <Route path="/leaders" component={Leaders} />
               <Route path="/tech/lessons" component={Lessons} />
               <Route path="/gracehopper" component={gracehopper} />
               <Route path="/variables0" component={Variables0} />

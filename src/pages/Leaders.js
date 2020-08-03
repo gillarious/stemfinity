@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
 
