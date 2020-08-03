@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         backgroundColor: '#73E08B',
-        textAlign: 'center'
+        height: '1.5em',
+        padding: theme.spacing(1.5),
+        textAlign: 'center',
+        color: 'black'
     }
 }));
 
@@ -77,9 +80,9 @@ export default function Variables1() {
     return (
         <div className="Variable-header">
             <Container>
-                <Grid container spacing={10}>
+                <Grid container spacing={9}>
                     <Grid item xs={12} className="title">
-                        <Paper className={classes.paper}>Variables (Page 1)</Paper>
+                        <Paper className={classes.title}>Variables (Page 1)</Paper>
                     </Grid>
                 </Grid>
                 <Grid item spacing={10}>
