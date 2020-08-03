@@ -67,7 +67,7 @@ export default function Lessons() {
             <Container className={classes.header}>
                 <Grid container spacing={10}>
                     <Grid item xs={12}>
-                        <Paper className={classes.title}>Technology</Paper>
+                        <Paper className={classes.title}>Technology: Lessons</Paper>
                     </Grid>
                     <Grid item xs={6}>
                         <Button variant="contained" href="/tech/lessons" className={classes.button}>
