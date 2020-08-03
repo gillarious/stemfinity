@@ -103,4 +103,5 @@ body {
 .Lessons .MuiTableCell-root {
   font-family: 'Poppins';
   text-align: left;
+  padding-right: 0px;
 }

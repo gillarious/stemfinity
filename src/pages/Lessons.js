@@ -31,10 +31,6 @@ const useStyles = makeStyles((theme) => ({
     header: {
         marginBottom: '2em',
     },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-    },
     button: {
         position: 'relative',
         backgroundColor: '#FFB5EA',
@@ -42,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         width: '50%',
         height: '3.5em',
+        '&:hover': {
+            backgroundColor: '#fff',
+        }
     },
 
     navButton: {
@@ -88,7 +87,7 @@ export default function Lessons() {
                         <TableBody>
                             <TableRow>
                                 <TableCell>
-                                    <IconButton aria-label="expand row" size="small" onClick={() => setOpenBeginner(!openBeginner)}>
+                                    <IconButton size="small" onClick={() => setOpenBeginner(!openBeginner)}>
                                         {openBeginner ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                                     </IconButton>
                                 </TableCell>
