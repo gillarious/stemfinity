@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
     img: {
         display: 'block',
-        width: "175px",
+        width: "200px",
         height: "250px",
         textAlign: 'center',
         margin: 'auto',
