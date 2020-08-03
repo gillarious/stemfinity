@@ -36,7 +36,10 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
       backgroundColor: '#73E08B',
-    },
+      height: '1.5em',
+      padding: theme.spacing(1.5),
+      textAlign: 'center',
+  },
 }));
 
 const button = makeStyles(theme => ({

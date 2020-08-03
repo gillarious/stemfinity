@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import variables_img from '../assets/lessons/variables_img.png';
+import variables_img from '../assets/lessons/Variables_1.png';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,14 +13,22 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     paper: {
-        padding: theme.spacing(1),
+        padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        backgroundColor: '#73E08B',
+        color: 'black',
     },
     img: {
         display: 'block', 
-        width: "20%",
-        height: "20%",
+        width: "40%",
+        height: "40%",
+    },
+    title: {
+        backgroundColor: '#73E08B',
+        height: '1.5em',
+        padding: theme.spacing(1.5),
+        textAlign: 'center',
+        color: 'black'
     }
 }));
 
@@ -72,9 +80,9 @@ export default function Variables1() {
     return (
         <div className="Variable-header">
             <Container>
-                <Grid container spacing={10}>
+                <Grid container spacing={9}>
                     <Grid item xs={12} className="title">
-                        <Paper className={classes.paper}>Variables (Page 1)</Paper>
+                        <Paper className={classes.title}>Variables (Page 1)</Paper>
                     </Grid>
                 </Grid>
                 <Grid item spacing={10}>
@@ -93,11 +101,11 @@ export default function Variables1() {
                         variable name.) Here's some examples of defining variables:<br /><br />
                             <code>x = 3</code><br />
                             <code>my_greeting = "Hi"</code><br />
-                            <code>PI = 3.14<br /></code>
+                            <code>PI = 3.14</code>
                     </p>
                 </Grid>
                 <center>
-                     <img className={classes.img} alt="What can you store in variables?" src={variables_img} />
+                    <img className={classes.img} alt="Variables are fun" src={variables_img} />
                 </center>
             </Container>
             <MuiThemeProvider theme={theme}>

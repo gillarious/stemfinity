@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import variables_img from '../assets/lessons/variables_img.png';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +15,18 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        backgroundColor: '#73E08B',
+        color: 'black',
     },
+    img: {
+        display: 'block',
+        width: "20%",
+        height: "20%",
+     
+    },
+    title: {
+        backgroundColor: '#73E08B',
+    }
 }));
 
 const button = makeStyles(theme => ({
@@ -52,18 +63,22 @@ export default function Variables0() {
         <div className="App-header">
             <Container>
                 <Grid container spacing={10}>
-                    <Grid item xs={12} className="title">
-                        <Paper className={classes.paper}>Variables</Paper>
+                    <Grid item xs={12}>
+                        <Paper className={classes.paper}>Lesson: Variables</Paper>
                     </Grid>
                 </Grid>
-            </Container>
-            <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                <br />In this lesson, you&apos;ll learn:<br />
+            <center>
+                <p></p>
+                <img className={classes.img} alt="Variables are fun!" src={variables_img} />
+            </center>
+            <Typography variant="h6" align="center" color="black" paragraph>
+                <br/>In this lesson, you&apos;ll learn:<br />
                 <br />
                 1. What a variable is, and why it&apos;s important in computing<br />
                 2. How to declare and initialize a variable<br />
-                3. Variable manipulation
-            </Typography>
+                3. Variable manipulation<br/>
+                </Typography>
+            </Container>
             <div className="button-left">
                 <MuiThemeProvider theme={theme}>
                     <Button
