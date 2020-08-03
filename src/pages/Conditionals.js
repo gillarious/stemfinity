@@ -64,7 +64,7 @@ export default function Variables0() {
             <Container>
                 <Grid container spacing={9}>
                     <Grid item xs={12}>
-                        <Paper className={classes.paper}>Conditionals</Paper>
+                        <Paper className={classes.paper}>Lesson: Conditionals</Paper>
                     </Grid>
                 </Grid>
             <center>
