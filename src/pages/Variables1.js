@@ -13,9 +13,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     paper: {
-        padding: theme.spacing(1),
+        padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        backgroundColor: '#73E08B',
+        color: 'black',
     },
     img: {
         display: 'block', 
@@ -24,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         backgroundColor: '#73E08B',
-        textAlign: 'center'
+        height: '1.5em',
+        padding: theme.spacing(1.5),
+        textAlign: 'center',
+        color: 'black'
     }
 }));
 
@@ -76,7 +80,7 @@ export default function Variables1() {
     return (
         <div className="Variable-header">
             <Container>
-                <Grid container spacing={10}>
+                <Grid container spacing={9}>
                     <Grid item xs={12} className="title">
                         <Paper className={classes.title}>Variables (Page 1)</Paper>
                     </Grid>

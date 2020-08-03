@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         backgroundColor: '#73E08B',
-        color: theme.palette.text.secondary,
+        color: 'black',
     },
     img: {
         display: 'block',
@@ -64,14 +64,14 @@ export default function Variables0() {
             <Container>
                 <Grid container spacing={9}>
                     <Grid item xs={12}>
-                        <Paper className={classes.paper}>Conditionals</Paper>
+                        <Paper className={classes.paper}>Lesson: Conditionals</Paper>
                     </Grid>
                 </Grid>
             <center>
                 <p></p>
                 <img className={classes.img} alt="Conditionals help with program flow" src={conditionals_img} />
             </center>
-            <Typography variant="h6" align="center" color="textSecondary" paragraph>
+            <Typography variant="h6" align="center" color="black" paragraph>
                 <br />In this lesson, you&apos;ll learn:<br />
                 <br />
                 1. What a conditional statement is and why it&apos;s important in computing<br />

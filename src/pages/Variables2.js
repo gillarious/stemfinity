@@ -20,10 +20,19 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    title: {
+        padding: theme.spacing(1.5),
+        height:'1.5em',
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        backgroundColor: '#73E08B',
+        fontFamily: "Poppins",
+      },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        fontFamily: "Poppins",
     },
     img: {
         display: 'block',
@@ -32,6 +41,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         margin: 'auto',
     },
+    textInfo: {
+        textAlign: 'center',
+        margin: 'auto',
+    }
 }));
 
 const button = makeStyles(theme => ({
@@ -133,7 +146,7 @@ export default function Variables2(){
         <Container>
         <Grid container spacing={10}>
             <Grid item xs={12} className="title">
-                <Paper className={classes.paper}>Variables (Page 2)</Paper>
+                <Paper className={classes.title} style={{background:""}}>Variables (Page 2)</Paper>
             </Grid>
         </Grid>
         <Grid item spacing={10}>
@@ -175,12 +188,12 @@ export default function Variables2(){
             <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                 <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                     <Grid item xs={12} className="title">
-                        <Paper className={classes.paper} fontFamily="Poppins"><b>STEM Leaders</b></Paper>
+                        <Paper className={classes.title}>STEM Leaders</Paper>
                     </Grid>
                 </DialogTitle>
             <DialogContent dividers>
             <Grid container spacing={10}>
-            <Grid item xs={10} padding ='auto' textAlign='center'>
+            <Grid className={classes.textInfo} item xs={10} padding ='auto'>
                 <p>Grace Hopper: Computer Scientist</p>
             </Grid>
             <Grid item xs wrap="nowrap">
