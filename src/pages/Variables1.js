@@ -13,9 +13,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     paper: {
-        padding: theme.spacing(1),
+        padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        backgroundColor: '#73E08B',
+        color: 'black',
     },
     img: {
         display: 'block', 
@@ -78,7 +79,7 @@ export default function Variables1() {
             <Container>
                 <Grid container spacing={10}>
                     <Grid item xs={12} className="title">
-                        <Paper className={classes.title}>Variables (Page 1)</Paper>
+                        <Paper className={classes.paper}>Variables (Page 1)</Paper>
                     </Grid>
                 </Grid>
                 <Grid item spacing={10}>
