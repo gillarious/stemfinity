@@ -12,23 +12,11 @@
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.13.1",
     "react-ace": "^9.1.1",
-<<<<<<< HEAD
-    "react-compound-timer": "^1.2.0",
-    "react-data-grid": "^7.0.0-canary.17",
-    "react-dom": "^16.13.1",
-    "react-native-leaderboard": "^1.0.6",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "react-simple-code-editor": "^0.11.0",
-    "react-stopwatch": "^2.0.4",
-    "react-stopwatch-timer": "^1.0.0"
-=======
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-simple-code-editor": "^0.11.0"
->>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
   },
   "scripts": {
     "start": "react-scripts start",
