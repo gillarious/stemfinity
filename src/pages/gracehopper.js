@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1.5),
     height:'1.5em',
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: 'black',
     backgroundColor: '#73E08B',
     fontFamily: "Poppins",
   },
