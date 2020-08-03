@@ -6,14 +6,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { Link } from 'react-router-dom';
-import { render } from "react-dom";
-import prompt from '../assets/prompt.png';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormLabel from '@material-ui/core/FormLabel';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -110,7 +102,7 @@ export default function Variables2() {
             </p>
 
             <Paper className={classes.paper}>
-                STEM LEADER SPOTLIGHT:  <br />
+            ✨STEM LEADER SPOTLIGHT ✨ <br />
             Did you know, Grace Hopper is one of the pioneers of the computer science field? <br />
             <Link to="/gracehopper">Click here to learn more!</Link></Paper>
         </Grid>
