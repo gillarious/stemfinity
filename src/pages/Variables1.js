@@ -5,7 +5,10 @@ import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+<<<<<<< HEAD
+=======
 import variables_img from '../assets/lessons/variables_img.png';
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,6 +16,12 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     paper: {
+<<<<<<< HEAD
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
+=======
         padding: theme.spacing(1),
         textAlign: 'center',
         color: theme.palette.text.secondary,
@@ -52,6 +61,7 @@ const button = makeStyles(theme => ({
         right: 225,
         textAlign: 'left'
     }
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
 }));
 
 const theme = createMuiTheme({
@@ -60,13 +70,33 @@ const theme = createMuiTheme({
             main: '#FFB5EA'
         }
     },
+<<<<<<< HEAD
+=======
     typography: {
         fontFamily: 'Poppins',
     }
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
 });
 
 export default function Variables1() {
     const classes = useStyles();
+<<<<<<< HEAD
+
+    return (
+        <div className="App-header">
+            <Container>
+                <Grid container spacing={10}>
+                    <Grid item xs={12}>
+                        <Paper className={classes.paper}>STEMfinity & Beyond</Paper>
+                    </Grid>
+                </Grid>
+            </Container>
+            <MuiThemeProvider theme={theme}>
+                <Button
+                    variant="outlined"
+                    color="secondary"
+                    className={classes.button}
+=======
     const loc = button();
 
     return (
@@ -106,11 +136,26 @@ export default function Variables1() {
                     color="secondary"
                     className={loc.footerR}
                     href="/variables2"
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
                     endIcon={<ArrowForwardIosIcon />}
                 >
                     Next
         </Button>
 
+<<<<<<< HEAD
+                <Button
+                    variant="outlined"
+                    color="secondary"
+                    className={classes.button}
+                    startIcon={<ArrowBackIosIcon />}
+                >
+                    Back
+        </Button>
+            </MuiThemeProvider>
+        </div>
+
+    );
+=======
             <Button
                 variant="contained"
                 color="secondary"
@@ -123,6 +168,7 @@ export default function Variables1() {
         </MuiThemeProvider>
      </div>
    );
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
 }
 
 

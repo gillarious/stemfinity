@@ -22,7 +22,11 @@ const button = makeStyles(theme => ({
   footer: {
     position: 'fixed',
     bottom: 50,
+<<<<<<< HEAD
+    right: 590,
+=======
     right: 585,
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
     textAlign: 'center'
   },
 
@@ -52,7 +56,11 @@ export default function Variables0() {
         <div className="App-header">
             <Container>
                 <Grid container spacing={10}>
+<<<<<<< HEAD
+                    <Grid item xs={12}>
+=======
                     <Grid item xs={12} className="title">
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
                         <Paper className={classes.paper}>Variables</Paper>
                     </Grid>
                 </Grid>
@@ -62,15 +70,23 @@ export default function Variables0() {
                 <br />
                 1. What a variable is, and why it&apos;s important in computing<br />
                 2. How to declare and initialize a variable<br />
+<<<<<<< HEAD
+                3. How conditionals are used
+=======
                 3. Variable manipulation
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
             </Typography>
             <div className="button-left">
                 <MuiThemeProvider theme={theme}>
                     <Button
                         variant="contained"
                         color="secondary"
+<<<<<<< HEAD
+                        className={loc.footer}
+=======
                         href="/variables1"
                         className={loc.button}
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
                     >
                         Let's Begin!
         </Button></MuiThemeProvider></div>
@@ -81,7 +97,10 @@ export default function Variables0() {
                         variant="contained"
                         color="secondary"
                         className={loc.footerL}
+<<<<<<< HEAD
+=======
                         href='/tech/lessons'
+>>>>>>> d31c7e62aea8954411f6f1394aa2b935da745dde
                         startIcon={<ArrowBackIosIcon />}
                     >
                         Back

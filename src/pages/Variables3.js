@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import { Link } from 'react-router-dom';
 import { render } from "react-dom";
 import prompt from '../assets/prompt.png';
 import Radio from '@material-ui/core/Radio';
@@ -15,6 +14,16 @@ import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormLabel from '@material-ui/core/FormLabel';
 
+const theme = createMuiTheme({
+  palette: {
+      secondary: {
+          main: '#FFB5EA',
+      }
+    },
+  typography: {
+      fontFamily: 'Poppins',
+    },
+});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -57,16 +66,6 @@ const button = makeStyles(theme => ({
   }
 }));
 
-const theme = createMuiTheme({
-  palette: {
-      secondary: {
-          main: '#FFB5EA'
-      }
-    },
-  typography: {
-      fontFamily: 'Poppins',
-    },
-});
 
 export default function Variables3() {
     const classes = useStyles();
@@ -103,7 +102,6 @@ export default function Variables3() {
       }
     };
 
-
     return (
     <div className="Variables-header">
         <Container>
@@ -122,8 +120,6 @@ export default function Variables3() {
 
 
     <div className="button-left">
-    <Paper className={loc.footerI}><img src={prompt} alt="prompt"/></Paper>
-
       <MuiThemeProvider theme={theme}>
         <Button
           variant="contained"
@@ -131,7 +127,7 @@ export default function Variables3() {
           className={loc.footerR}
           endIcon={<ArrowForwardIosIcon />}
         >
-        <Link to="/VariablesSummary">Next</Link>
+        Next
         </Button></MuiThemeProvider></div>
 
       <div className="button-right">
@@ -146,12 +142,11 @@ export default function Variables3() {
           <FormControlLabel value="worst" control={<Radio />} label="D: None of the Above" />
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
-        <Button type="submit" variant="outlined" color="primary" className={classes.button}>
+        <Button type="submit" variant="outlined" color="secondary" className={classes.button}>
           Check Answer
         </Button>
       </FormControl>
     </form>
-
 
         <MuiThemeProvider theme={theme}>
         <Button
@@ -160,7 +155,7 @@ export default function Variables3() {
           className={loc.footerL}
           startIcon={<ArrowBackIosIcon />}
         >
-        <Link to="/Variables2">Back</Link>
+        Back
         </Button>
       </MuiThemeProvider></div>
     </div>
