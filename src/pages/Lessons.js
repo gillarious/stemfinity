@@ -108,6 +108,11 @@ export default function Lessons() {
                                                     </TableRow>
                                                     <TableRow>
                                                         <TableCell component="th" scope="row">
+                                                            <Link to="/conditionals0">Conditionals</Link>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell component="th" scope="row">
                                                             <Link to="/">Data Types</Link>
                                                         </TableCell>
                                                     </TableRow>
@@ -119,11 +124,6 @@ export default function Lessons() {
                                                     <TableRow>
                                                         <TableCell component="th" scope="row">
                                                             <Link to="/variables0">Basic Data Structures</Link>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                    <TableRow>
-                                                        <TableCell component="th" scope="row">
-                                                            <Link to="/conditionals0">Conditionals</Link>
                                                         </TableCell>
                                                     </TableRow>
                                                     <TableRow>
