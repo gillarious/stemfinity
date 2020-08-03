@@ -50,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    title: {
+      backgroundColor: '#73E08B',
+    },
 }));
 
 const button = makeStyles(theme => ({
@@ -71,7 +74,6 @@ const button = makeStyles(theme => ({
     position: 'fixed',
     bottom: 50,
     left: 650,
-    right: 100,
     textAlign: 'center'
   },
 
@@ -113,10 +115,10 @@ export default function VariablesSummary() {
     <Container>
         <Grid container spacing={10}>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>Lesson: Variables (You Did It!)</Paper>
+                <Paper className={classes.title}>Lesson: Variables (You Did It!)</Paper>
             </Grid>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>You scored []! You've placed []</Paper>
+                You completed the exercise in [ ] seconds! You've placed [ ] out of 100.
             </Grid>
             <Grid item xs={4}>
 
@@ -156,6 +158,7 @@ export default function VariablesSummary() {
           variant="contained"
           color = "secondary"
           className={loc.footerR}
+          href="/conditionals"
           endIcon={<ArrowForwardIosIcon />}
         >Next Lesson: Conditionals
         </Button></MuiThemeProvider></div>
@@ -166,6 +169,7 @@ export default function VariablesSummary() {
           variant="contained"
           color = "secondary"
           className={loc.footerC}
+          href="/tech/lessons"
         >Back to Lessons
         </Button></MuiThemeProvider></div>
 
@@ -175,6 +179,7 @@ export default function VariablesSummary() {
           variant="contained"
           color = "secondary"
           className={loc.footerL}
+          href="/variables3"
           startIcon={<ArrowBackIosIcon />}
         >Back
         </Button>

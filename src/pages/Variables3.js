@@ -34,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    title: {
+      backgroundColor: '#73E08B',
+    },
 }));
 
 const button = makeStyles(theme => ({
@@ -61,7 +64,7 @@ const button = makeStyles(theme => ({
   footerA: {
     position: 'fixed',
     bottom: 185,
-    right: 225,
+    right: 650,
     textAlign: 'left'
   }
 }));
@@ -107,10 +110,10 @@ export default function Variables3() {
         <Container>
             <Grid container spacing={9}>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>Lesson: Variables (Review)</Paper>
+                    <Paper className={classes.title}>Lesson: Variables (Review)</Paper>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>Let's review what you learned!</Paper>
+                    Let's review what you learned! Try solving the sample problem below.
                 </Grid>
                 <Grid item xs={8}>
                     <Paper className={loc.footerI}><img src={prompt} alt="prompt"/></Paper>
@@ -125,6 +128,7 @@ export default function Variables3() {
           variant="contained"
           color = "secondary"
           className={loc.footerR}
+          href="/variablessummary"
           endIcon={<ArrowForwardIosIcon />}
         >
         Next
@@ -132,6 +136,7 @@ export default function Variables3() {
 
       <div className="button-right">
 
+      <MuiThemeProvider theme={theme}>
       <form onSubmit={handleSubmit}>
       <FormControl component="fieldset" error={error} className={loc.footerA}>
         <FormLabel component="legend">What will be the output?</FormLabel>
@@ -142,17 +147,19 @@ export default function Variables3() {
           <FormControlLabel value="worst" control={<Radio />} label="D: None of the Above" />
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
-        <Button type="submit" variant="outlined" color="secondary" className={classes.button}>
+        <Button type="submit" variant="contained" color="secondary" className={classes.button}>
           Check Answer
         </Button>
       </FormControl>
     </form>
+    </MuiThemeProvider>
 
         <MuiThemeProvider theme={theme}>
         <Button
           variant="contained"
           color = "secondary"
           className={loc.footerL}
+          href="/variables2"
           startIcon={<ArrowBackIosIcon />}
         >
         Back
