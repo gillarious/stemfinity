@@ -125,7 +125,7 @@ export default function Leaders() {
                 variant="contained"
                 color="secondary"
                 className={loc.footerL}
-                href="/variables0"
+                href="/leaders"
                 startIcon={<ArrowBackIosIcon />}
             >
                 Back
