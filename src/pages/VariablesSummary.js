@@ -11,6 +11,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
+
 const StyledTableCell = withStyles((theme) => ({
     head: {
       backgroundColor: theme.palette.common.black,
@@ -29,16 +30,16 @@ const StyledTableCell = withStyles((theme) => ({
     },
   }))(TableRow);
   
-  function createData(rank, name, time) {
-    return { rank, name, time};
+  function createData(rank, name, attempts) {
+    return { rank, name, attempts};
   }
   
   const rows = [
-    createData('1: ', "Elliot", 6.0),
-    createData('2: ', "Maria", 9.0),
-    createData('3: ', "Natasha", 16.0),
-    createData('4: ', "...", "...", "...", "..."),
-    createData('5: ', "Billy", 20.0),
+    createData('1: ', "Elliot", 1),
+    createData('2: ', "Maria", 1),
+    createData('3: ', "Natasha", 1),
+    createData('... ', "...", "...", "...", "..."),
+    createData('100: ', "Billy", 4),
   ];
 
 const useStyles = makeStyles((theme) => ({
@@ -50,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    title: {
+      backgroundColor: '#73E08B',
+  },
 }));
 
 const button = makeStyles(theme => ({
@@ -71,13 +75,12 @@ const button = makeStyles(theme => ({
     position: 'fixed',
     bottom: 50,
     left: 650,
-    right: 100,
     textAlign: 'center'
   },
 
   footerI: {
     position: 'fixed',
-    bottom: 125,
+    bottom: 150,
     left: 100,
     textAlign: 'left',
   },
@@ -85,7 +88,7 @@ const button = makeStyles(theme => ({
   footerA: {
     position: 'fixed',
     bottom: 185,
-    right: 225,
+    right: 300,
     textAlign: 'left'
   }
 }));
@@ -113,22 +116,22 @@ export default function VariablesSummary() {
     <Container>
         <Grid container spacing={10}>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>Lesson: Variables (You Did It!)</Paper>
+                <Paper className={classes.title}>Lesson: Variables (You Did It!)</Paper>
             </Grid>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>You scored []! You've placed []</Paper>
+                You took 3 tries to get the solution correctly! Here are other's attempts:
             </Grid>
             <Grid item xs={4}>
 
     <MuiThemeProvider theme={theme}>
   
             <TableContainer component={Paper}>
-      <Table style={{ width: 600 }} className={loc.footerI}>
+      <Table style={{ width: 1200 }} className={loc.footerI}>
         <TableHead>
           <TableRow>
             <StyledTableCell>Ranking</StyledTableCell>
             <StyledTableCell>Name</StyledTableCell>
-            <StyledTableCell>Time (Seconds)</StyledTableCell>
+            <StyledTableCell>Attempts</StyledTableCell>
 
           </TableRow>
         </TableHead>
@@ -139,7 +142,7 @@ export default function VariablesSummary() {
                 {row.rank}
               </StyledTableCell>
               <StyledTableCell>{row.name}</StyledTableCell>
-              <StyledTableCell>{row.time}</StyledTableCell>
+              <StyledTableCell>{row.attempts}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
@@ -156,6 +159,7 @@ export default function VariablesSummary() {
           variant="contained"
           color = "secondary"
           className={loc.footerR}
+          href="/conditionals"
           endIcon={<ArrowForwardIosIcon />}
         >Next Lesson: Conditionals
         </Button></MuiThemeProvider></div>
@@ -165,7 +169,9 @@ export default function VariablesSummary() {
         <Button
           variant="contained"
           color = "secondary"
+          href="/tech/lessons"
           className={loc.footerC}
+          href="/tech/lessons"
         >Back to Lessons
         </Button></MuiThemeProvider></div>
 
@@ -175,6 +181,7 @@ export default function VariablesSummary() {
           variant="contained"
           color = "secondary"
           className={loc.footerL}
+          href="/variables3"
           startIcon={<ArrowBackIosIcon />}
         >Back
         </Button>

@@ -94,35 +94,13 @@ body {
   color: #000;
 }
 
-link:hover {
-  background-color: #FFB5EA;
-}
-
-.popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.modal_content {
-  background-color: white;
+.Lessons a {
+  text-decoration: none;
+  color: black;
   font-family: 'Poppins', sans-serif;
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  width: 40%;
-  padding: 20px;
-  border-radius: 5px;
-  border: 2px solid black;
 }
 
-.close {
-  color: Black;
-  float: right;
-}
-
-.close:hover {
-  color: cyan;
-  cursor: pointer;
+.Lessons .MuiTableCell-root {
+  font-family: 'Poppins';
+  text-align: left;
 }
