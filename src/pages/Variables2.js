@@ -1,12 +1,20 @@
 import React from 'react';
-import { Box, Grid, Container, makeStyles, Paper } from '@material-ui/core/';
+import { Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
 import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { Link } from 'react-router-dom';
-
+import Dialog from '@material-ui/core/Dialog';
+import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import MuiDialogContent from '@material-ui/core/DialogContent';
+import MuiDialogActions from '@material-ui/core/DialogActions';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import { withStyles } from '@material-ui/core/styles';
+import gracehopper from '../assets/people/gracehopper.jpeg';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+    },
+    img: {
+        display: 'block',
+        width: "175px",
+        height: "250px",
+        textAlign: 'center',
+        margin: 'auto',
     },
 }));
 
@@ -49,6 +64,46 @@ const button = makeStyles(theme => ({
   }
 }));
 
+const styles = (theme) => ({
+    root: {
+      margin: 0,
+      padding: theme.spacing(2),
+    },
+    closeButton: {
+      position: 'absolute',
+      right: theme.spacing(1),
+      top: theme.spacing(1),
+      color: theme.palette.grey[500],
+    },
+});
+  
+const DialogTitle = withStyles(styles)((props) => {
+    const { children, classes, onClose, ...other } = props;
+    return (
+      <MuiDialogTitle disableTypography className={classes.root} {...other}>
+        <Typography theme={theme}>{children}</Typography>
+        {onClose ? (
+          <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+            <CloseIcon />
+          </IconButton>
+        ) : null}
+      </MuiDialogTitle>
+    );
+});
+  
+const DialogContent = withStyles((theme) => ({
+    root: {
+      padding: theme.spacing(2),
+    },
+}))(MuiDialogContent);
+  
+const DialogActions = withStyles((theme) => ({
+    root: {
+      margin: 0,
+      padding: theme.spacing(1),
+    },
+}))(MuiDialogActions);
+
 const theme = createMuiTheme({
   palette: {
       secondary: {
@@ -60,9 +115,18 @@ const theme = createMuiTheme({
     },
 });
 
-export default function Variables2() {
+export default function Variables2(){
     const classes = useStyles();
     const loc = button();
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     return (
     <div className="Variables-header">
@@ -102,9 +166,46 @@ export default function Variables2() {
             </p>
 
             <Paper className={classes.paper}>
-            ✨STEM LEADER SPOTLIGHT ✨ <br />
-            Did you know, Grace Hopper is one of the pioneers of the computer science field? <br />
-            <Link to="/gracehopper">Click here to learn more!</Link></Paper>
+            <span role="img" aria-label="Sparkles">✨</span>
+            STEM LEADER SPOTLIGHT <span role="img" aria-label="Sparkles">✨</span><br />
+            Did you know, Grace Hopper is one of the pioneers of the computer science field - fundamental to the variables we know and use today? <br />
+            <Button variant="contained" color="secondary" onClick={handleClickOpen}>
+        Click here to learn more about Grace Hopper!
+      </Button>
+            <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+                <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+                    <Grid item xs={12} className="title">
+                        <Paper className={classes.paper} fontFamily="Poppins"><b>STEM Leaders</b></Paper>
+                    </Grid>
+                </DialogTitle>
+            <DialogContent dividers>
+            <Grid container spacing={10}>
+            <Grid item xs={10} padding ='auto' textAlign='center'>
+                <p>Grace Hopper: Computer Scientist</p>
+            </Grid>
+            <Grid item xs wrap="nowrap">
+                <img className={classes.img} alt="Grace Hopper in a military uniform" src ={gracehopper} />
+            </Grid>
+            <Grid item wrap="nowrap" padding='auto'>
+            <p style={{textAlign:"left"}}>
+              Grace Murray Hopper, born in New York City in 1906, studied math and physics after enrolling at Vassar at 17.
+              She is credited for inventing a compiler in 1952 that translated English into computer code. This invention paved 
+              the way for the creation of COBOL and Fortran, which made it possible for non-programming experts to do their own programming!
+              One of COBOL's original ideas was to allow identifiers to be long enough to be meaningful, which in turn made code a lot more readable.
+              She continued working on projects for the US Navy, and was even promoted to the role of admiral by Ronald Reagan. 
+              She retired in 1986, but her legacy lives on in many ways. Her former students made Vassar one of the first liberal
+              arts colleges with a computer center, and now one of the biggest celebrations of women in computing is named for her.
+            </p>
+          </Grid>
+        </Grid>
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={handleClose} color="primary">
+            Go Back
+          </Button>
+        </DialogActions>
+      </Dialog>
+            </Paper>
         </Grid>
     </Container>
 
@@ -114,9 +215,9 @@ export default function Variables2() {
           variant="contained"
           color = "secondary"
           className={loc.footerR}
+          href ="/variables3"
           endIcon={<ArrowForwardIosIcon />}
-        >
-        <Link to="/Variables3">Next</Link>
+        >Next
         </Button></MuiThemeProvider></div>
 
       <div className="button-right">
@@ -126,9 +227,9 @@ export default function Variables2() {
           variant="contained"
           color = "secondary"
           className={loc.footerL}
+          href="/variables1"
           startIcon={<ArrowBackIosIcon />}
-        >
-        <Link to="/Variables1">Back</Link>
+        >Back
         </Button>
       </MuiThemeProvider></div>
     </div>
