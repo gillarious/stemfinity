@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
-import gracehopper from '../assets/people/gracehopper.jpeg';
 import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import gracehopper from '../assets/people/gracehopper.jpeg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
-      fontFamily: "Poppins",
   },
   title: {
     padding: theme.spacing(1.5),
@@ -35,18 +35,32 @@ const useStyles = makeStyles((theme) => ({
 
 const button = makeStyles(theme => ({
   footerR: {
-    position: 'fixed',
-    bottom: 50,
-    right: 50,
-    textAlign: 'right'
+      position: 'fixed',
+      bottom: 50,
+      right: 50,
+      textAlign: 'right'
   },
 
   footerL: {
-    position: 'fixed',
-    bottom: 50,
-    left: 10,
-    textAlign: 'left'
+      position: 'fixed',
+      bottom: 50,
+      left: 50,
+      textAlign: 'left'
   },
+
+  footerI: {
+      position: 'fixed',
+      bottom: 150,
+      left: 100,
+      textAlign: 'left'
+  },
+
+  footerA: {
+      position: 'fixed',
+      bottom: 185,
+      right: 225,
+      textAlign: 'left'
+  }
 }));
 
 const theme = createMuiTheme({
@@ -54,19 +68,19 @@ const theme = createMuiTheme({
       secondary: {
           main: '#FFB5EA'
       }
-    },
+  },
   typography: {
       fontFamily: 'Poppins',
-      text: 'Black',
-    },
+  }
 });
+
 
 export default function Leaders() {
   const classes = useStyles();
   const loc = button();
 
   return (
-    <div className="Home">
+    <div className="Variables-header">
     <Container>
         <Grid container spacing={10}>
             <Grid item xs={12} className="title">
@@ -95,21 +109,28 @@ export default function Leaders() {
           </Grid>
         </Grid>
       </Container>
-      <Grid item>
+
       <MuiThemeProvider theme={theme}>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    className={loc.footerR}
+                    href="/variables2"
+                    endIcon={<ArrowForwardIosIcon />}
+                >
+                    Next
+        </Button>
+
             <Button
                 variant="contained"
                 color="secondary"
                 className={loc.footerL}
-                href="/leaders"
+                href="/variables0"
                 startIcon={<ArrowBackIosIcon />}
             >
                 Back
             </Button>
         </MuiThemeProvider>
-      </Grid>
-      
-      
     </div>
   );
 }
