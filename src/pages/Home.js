@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         height: '8.5em',
         textAlign: 'center',
+        margin: 0,
         position: 'relative',
         display: 'flex',
         alignItems: 'center',

@@ -113,7 +113,7 @@ export default function Variables3() {
                     <Paper className={classes.title}>Lesson: Variables (Review)</Paper>
                 </Grid>
                 <Grid item xs={12}>
-                    Let's review what you learned! Try solving the sample problem below.
+                    Let's review what you learned! See if you can solve the example problem below.
                 </Grid>
                 <Grid item xs={8}>
                     <Paper className={loc.footerI}><img src={prompt} alt="prompt"/></Paper>

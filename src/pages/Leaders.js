@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Grid, Container, makeStyles, Paper } from '@material-ui/core/';
 import '../App.css';
 
@@ -26,7 +26,7 @@ export default function Leaders() {
             </Grid>
         </Grid>
         <Grid item spacing={10}>
-          <Link to="tech/leaders/gracehopper">Grace Hopper Link</Link>
+          <Link to="/gracehopper">Grace Hopper Link</Link>
         </Grid>
     </Container>
 </div>

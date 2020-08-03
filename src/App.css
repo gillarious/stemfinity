@@ -75,6 +75,7 @@ body {
   color: white;
   position: relative;
   font-size: 1.5em;
+  -webkit-text-stroke: 1px black;
 }
 
 .Lessons {
@@ -86,4 +87,20 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000;
+}
+
+.Lessons .title {
+  font-size: calc(30px + 2vmin);
+  color: #000;
+}
+
+.Lessons a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Lessons .MuiTableCell-root {
+  font-family: 'Poppins';
+  text-align: left;
 }
