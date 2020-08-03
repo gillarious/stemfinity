@@ -8,6 +8,7 @@ import Leaders from './pages/Leaders'
 import Lessons from './pages/Lessons'
 import Variables0 from './pages/Variables0'
 import Variables1 from './pages/Variables1'
+import Variables2 from './pages/Variables2'
 import Variables3 from './pages/Variables3'
 import Conditionals from './pages/Conditionals'
 import gracehopper from './pages/gracehopper'
@@ -22,6 +23,7 @@ ReactDOM.render((
               <Route path="/gracehopper" component={gracehopper} />
               <Route path="/variables0" component={Variables0} />
               <Route path="/variables1" component={Variables1} />
+              <Route path="/variables2" component={Variables2} />
               <Route path="/variables3" component={Variables3} />
               <Route path="/conditionals0" component={Conditionals} />
           </Switch>

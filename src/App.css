@@ -69,3 +69,21 @@ body {
   font-size: calc(30px + 2vmin);
   color: #000;
 }
+
+.Home a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-size: 1.5em;
+}
+
+.Lessons {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+}
